@@ -12,3 +12,7 @@
     + Add Dependencies : Config Server. Finally download
 
 * Create and configure the discovery server
+  - Added dependencies :
+    + Config Server
+    + Eureka Server
+  - Configuration application.yml 
