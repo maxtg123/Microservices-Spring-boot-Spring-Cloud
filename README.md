@@ -1,3 +1,4 @@
+* ![Global-architeture](diagrams/domain-class-diagram-global-architecture.drawio.png)
 * Setup the infrastructure and tool
   - You need to configure the file: docker-compose.yml
     + Let's configure some services: postgresql, pgadmin, zipkin, mongodb, mongo-express, zookeeper, kafka and mail-dev in file docker-compose.yml
