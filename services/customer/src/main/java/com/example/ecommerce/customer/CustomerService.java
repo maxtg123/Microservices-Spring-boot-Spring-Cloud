@@ -47,7 +47,7 @@ public class CustomerService {
     }
 
 
-    public List<Object> findAllCustomers() {
+    public List<CustomerResponse>  findAllCustomers() {
         return repository.findAll()
                 .stream()
                 .map(mapper::fromCustomer)
