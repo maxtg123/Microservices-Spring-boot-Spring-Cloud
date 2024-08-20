@@ -29,8 +29,8 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CustomerResponse>> findAll(){
-        return ResponseEntity.ok(service.findAllCustomers());
+   public ResponseEntity<List<CustomerResponse>> findAll(){
+        return  ResponseEntity.ok(service.findAllCustomers());
     }
 
     @GetMapping("/exits/{customer-id")

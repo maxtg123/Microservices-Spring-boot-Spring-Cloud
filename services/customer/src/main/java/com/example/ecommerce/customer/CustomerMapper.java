@@ -1,7 +1,12 @@
 package com.example.ecommerce.customer;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
+
 public class CustomerMapper {
-    public Customer toCutomer(CustomerRequest request) {
+    public Customer toCustomer(CustomerRequest request) {
         if(request == null){
             return null;
         }
@@ -14,7 +19,7 @@ public class CustomerMapper {
                 .build();
     }
 
-    public Object fromCustomer(Customer customer) {
+    public CustomerResponse fromCustomer(Customer customer) {
         return new CustomerResponse(
                 customer.getId(),
                 customer.getFirstname(),

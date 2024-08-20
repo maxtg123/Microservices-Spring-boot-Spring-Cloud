@@ -17,8 +17,10 @@ public class CustomerService {
 
     private final CustomerRepository repository;
     private final CustomerMapper mapper;
+
+
     public String createCustomer(CustomerRequest request){
-        var customer = repository.save(mapper.toCutomer(request));
+        var customer = repository.save(mapper.toCustomer(request));
         return customer.getId();
     }
 
@@ -47,21 +49,24 @@ public class CustomerService {
     }
 
 
-    public List<CustomerResponse>  findAllCustomers() {
+    public List<CustomerResponse> findAllCustomers(){
         return repository.findAll()
                 .stream()
                 .map(mapper::fromCustomer)
                 .collect(Collectors.toList());
     }
 
-    public Boolean exitsById(String customerId) {
-        return repository.findById(customerId)
-                .isPresent();
-    }
+
+
     public CustomerResponse findById(String customerId) {
         return repository.findById(customerId)
                 .map(mapper::fromCustomer)
                 .orElseThrow(() -> new CustomerNotFoundException(format("No customer with the provider ID:: %s", customerId)));
+    }
+
+    public Boolean exitsById(String customerId) {
+        return repository.findById(customerId)
+                .isPresent();
     }
 
     public void deleteCustomer(String customerId) {
