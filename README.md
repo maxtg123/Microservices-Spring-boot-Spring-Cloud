@@ -17,3 +17,6 @@
     + Config Server
     + Eureka Server
   - Configuration application.yml 
+
+* ![Diagram](diagrams/domain-class-diagram-class-diagram.drawio.png)
+
