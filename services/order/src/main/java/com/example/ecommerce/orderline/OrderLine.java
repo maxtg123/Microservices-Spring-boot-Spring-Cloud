@@ -1,6 +1,7 @@
 package com.example.ecommerce.orderline;
 
-import com.example.ecommerce.order.Oder;
+import com.example.ecommerce.order.Order;
+import com.example.ecommerce.order.Order;
 import jakarta.persistence.*;
 
 import lombok.*;
@@ -15,9 +16,11 @@ public class OrderLine {
     @Id
     @GeneratedValue
     private Integer id;
+
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Oder order;
+    private Order order;
+
     private Integer productId;
     private double quantity;
 }

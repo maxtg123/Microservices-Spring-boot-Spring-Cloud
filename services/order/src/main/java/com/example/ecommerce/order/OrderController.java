@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class OrderController {
 
-    private final OderService service;
+    private final OrderService service;
 
     @PostMapping
     public ResponseEntity<Integer> createOder(
