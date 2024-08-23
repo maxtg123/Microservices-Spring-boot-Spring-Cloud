@@ -1,4 +1,4 @@
-package com.example.ecommerce.order;
+package com.example.ecommerce.product;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
