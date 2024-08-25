@@ -31,7 +31,8 @@ public class OrderService {
 
     private final OrderProducer orderProducer;
 
-    public Integer CreateOrder( OrderRequest request) {
+    public Integer
+    CreateOrder( OrderRequest request) {
         // //check the customer --> OpenFeign
         var customer = this.customerClient.findCustomerById(request.customerId())
                 .orElseThrow(() -> new BusinessException("Can not create oder:: No customer exits with the provided ID::"));

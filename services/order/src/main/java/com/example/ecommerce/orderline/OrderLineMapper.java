@@ -1,6 +1,7 @@
 package com.example.ecommerce.orderline;
 
 import com.example.ecommerce.order.Order;
+import com.example.ecommerce.order.OrderResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,5 +18,9 @@ public class OrderLineMapper {
                 )
                 .productId(request.productId())
                 .build();
+    }
+
+    public OrderLineResponse toOrderLineResponse(OrderLine orderLine) {
+        return new OrderLineResponse(orderLine.getId(), orderLine.getQuantity());
     }
 }
