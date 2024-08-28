@@ -1,8 +1,12 @@
 package com.example.ecommerce.customer;
 
 
-import lombok.*;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.validation.annotation.Validated;
 
 @AllArgsConstructor
@@ -12,6 +16,7 @@ import org.springframework.validation.annotation.Validated;
 @Setter
 @Validated
 public class Address {
+
     private String street;
     private String houseNumber;
     private String zipCode;

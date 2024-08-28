@@ -1,17 +1,12 @@
-package com.example.ecommerce.kafka.payment;
+package com.example.ecommerce.kafka.order;
 
 import java.math.BigDecimal;
 
 public record Product(
-
         Integer productId,
-
         String name,
-
         String description,
-
         BigDecimal price,
-
         double quantity
 ) {
 }

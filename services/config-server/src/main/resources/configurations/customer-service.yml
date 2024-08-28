@@ -1,3 +1,5 @@
+server:
+  port: 8090
 spring:
   data:
     mongodb:
@@ -5,7 +7,5 @@ spring:
       password: phong
       host: localhost
       port: 27017
-      database : customer
+      database: customer
       authentication-database: admin
-server:
-  port: 8090

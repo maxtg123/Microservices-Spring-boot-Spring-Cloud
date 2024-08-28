@@ -1,19 +1,17 @@
 package com.example.ecommerce.product;
 
 import com.example.ecommerce.category.Category;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ProductMapper {
-    public Product toProduct( ProductRequest request) {
+    public Product toProduct(ProductRequest request) {
         return Product.builder()
                 .id(request.id())
                 .name(request.name())
                 .description(request.description())
-                .price(request.price())
                 .availableQuantity(request.availableQuantity())
+                .price(request.price())
                 .category(
                         Category.builder()
                                 .id(request.categoryId())
@@ -35,13 +33,13 @@ public class ProductMapper {
         );
     }
 
-    public ProductPurchaseResponse toProductPurchaseResponse(Product product, double quantity) {
-         return new ProductPurchaseResponse(
-                 product.getId(),
-                 product.getName(),
-                 product.getDescription(),
-                 product.getPrice(),
-                 quantity
-         );
+    public ProductPurchaseResponse toproductPurchaseResponse(Product product, double quantity) {
+        return new ProductPurchaseResponse(
+                product.getId(),
+                product.getName(),
+                product.getDescription(),
+                product.getPrice(),
+                quantity
+        );
     }
 }

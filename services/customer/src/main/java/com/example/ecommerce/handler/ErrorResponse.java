@@ -1,8 +1,10 @@
 package com.example.ecommerce.handler;
 
 import java.util.Map;
+import java.util.Set;
 
-public record ErrorRespone (
-        Map<String, String> errors
-){
+public record ErrorResponse(
+    Map<String, String> errors
+) {
+
 }

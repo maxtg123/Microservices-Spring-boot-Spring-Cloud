@@ -1,16 +1,19 @@
 package com.example.ecommerce.payment;
 
-import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PaymentMapper {
-    public Payment toPayment(@Valid PaymentRequest request) {
-        return Payment.builder()
-                .id(request.id())
-                .orderId(request.orderId())
-                .amount(request.amount())
-                .paymentMethod(request.paymentMethod())
-                .build();
+
+  public Payment toPayment(PaymentRequest request) {
+    if (request == null) {
+      return null;
     }
+    return Payment.builder()
+        .id(request.id())
+        .paymentMethod(request.paymentMethod())
+        .amount(request.amount())
+        .orderId(request.orderId())
+        .build();
+  }
 }
