@@ -30,7 +30,9 @@
 <p style="font-size:15px;">run postman via API path</p>
 
 http://localhost:8222/api/v1/customers
+
 http://localhost:8222/api/v1/orders
+
 http://localhost:8222/api/v1/products
 
 
